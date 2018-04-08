@@ -10,6 +10,8 @@ $brown-dark: #262512;
 $brown: #402F1D;
 $brown-light: #7D634C;
 $cream-white: #E8E3D8;
+$nav-bg: #736D1F;
+
 
 
 
@@ -33,7 +35,7 @@ $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
 $brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
 $brand-success:         #5cb85c !default;
-$brand-info:            #5bc0de !default;
+$brand-info:            lighten($nav-bg, 10%);
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
@@ -179,7 +181,7 @@ $btn-success-border:             darken($btn-success-bg, 5%) !default;
 
 $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;
-$btn-info-border:                darken($btn-info-bg, 5%) !default;
+$btn-info-border:                darken($btn-info-bg, 15%);
 
 $btn-warning-color:              #fff !default;
 $btn-warning-bg:                 $brand-warning !default;
@@ -385,7 +387,6 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$nav-bg: #736D1F;
 $navbar-default-color:             $cream-white;
 $navbar-default-bg:                $nav-bg;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%);
