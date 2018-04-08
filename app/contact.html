@@ -11,59 +11,65 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container">
-      <a class="logo" href="/index.html">Caddo Lake Bayou Tours</a>
-      <nav class="navbar navbar-default">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+    <div class="container body-content">
+      <header>
+        <div class="logo-container">
+          <a class="logo" href="/index.html">Caddo Lake Bayou Tours</a>
         </div>
-        <div class="collapse navbar-collapse" id="main-nav">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="about.html">About</a>
-            </li>
-            <li>
-              <a href="directions.html">Directions</a>
-            </li>
-            <li>
-              <a href="photo-gallery.html">Photo Gallery</a>
-            </li>
-            <li class="active">
-              <a href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="container">
-      <h1>Contact</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <div class="row">
+        <nav class="navbar navbar-default">
+          <a class="navbar-brand" href="/index.html">Caddo Lake Bayou Tours</a>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="about.html">About</a>
+              </li>
+              <li>
+                <a href="directions.html">Directions</a>
+              </li>
+              <li>
+                <a href="photo-gallery.html">Photo Gallery</a>
+              </li>
+              <li class="active">
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <section>
+        <h1>Contact</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="row">
         <div class="col-xs-12 col-sm-6">
           <h3>Send a Message</h3>
           <p>Ask about tour reservations or general questions.</p>
           <form>
             <div class="form-group">
-              <input class="form-control" type="text" name="full_name" id="full_name" />
+              <label for="first_name">First Name</label>
+              <input class="form-control" type="text" name="first_name" id="first_name" />
             </div>
             <div class="form-group">
-              <input class="form-control" type="text" name="full_name" id="full_name" />
+              <label for="last_name">Last Name</label>
+              <input class="form-control" type="text" name="last_name" id="last_name" />
             </div>
             <div class="form-group">
+              <label for="email">Email</label>
               <input class="form-control" type="email" name="email" id="email" />
             </div>
             <div class="form-group">
+              <label for="subject">Subject</label>
              <input class="form-control" type="text" name="subject" id="subject" />
             </div>
             <div class="form-group">
+              <label for="message">Message</label>
               <textarea class="form-control" name="message" id="message"></textarea>
             </div>
           </form>
@@ -75,6 +81,61 @@
           <p>Phone Number</p>
         </div>
       </div>
+      </section>
+      <section>
+        <div class="row">
+          <div class="col-xs-12 col-sm-7">
+            <h3>Some title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a class="btn btn-info" href="photo-gallery.html">View Photos</a>
+          </div>
+          <div class="col-xs-12 col-sm-5">
+            <img class="img-responsive" src="images/test-image.jpg" alt="Test Image" />
+          </div>
+        </div>
+        <div class="row">
+        <div class="col-xs-12 col-sm-5">
+          <img class="img-responsive" src="images/test-image.jpg" alt="Test Image" />
+        </div>
+        <div class="col-xs-12 col-sm-7">
+          <h2>Cool Stuff</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h4>Cool Stuff to do</h4>
+          <ul>
+            <li>Things to see</li>
+            <li>Things to see</li>
+            <li>Things to see</li>
+            <li>Things to see</li>
+          </ul>
+        </div>
+      </div>
+      </section>
+      <footer>
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <h4>Sitemap</h4>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="directions.html">Directions</a></li>
+              <li><a href="photo-gallery.html">Photo Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <h4>Quick Links</h4>
+            <ul class="list-unstyled">
+              <li>First</li>
+              <li>Second</li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <h4>Social Media</h4>
+          </div>
+        </div>
+        <p class="copy-right">Copyright 2018 &copy;</p>
+      </footer>
     </div>
 
     <!-- build:js js/bootstrap-bundle.js -->
