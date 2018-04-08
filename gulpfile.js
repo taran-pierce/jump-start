@@ -22,6 +22,18 @@ gulp.task('sass', () => {
     }))
 });
 
+gulp.task('css', () => {
+  return gulp.src('app/scss/**/*.scss')
+    .pipe(pl.sass())
+    .pipe(pl.cssnano())
+    .pipe(gulp.dest('dist/css'))
+});
+
+gulp.task('js', () => {
+  return gulp.src('app/js/**/*.js')
+    .pipe(gulp.dest('dist/js'))
+});
+
 // watch app and run different tasks
 gulp.task('watch', ['browserSync', 'sass'], () => {
   gulp.watch('app/scss/**/*.scss', ['sass']);
@@ -73,6 +85,11 @@ gulp.task('clean:dist', function() {
 // build project
 gulp.task('build', () => {
   runSequence('clean:dist', ['sass', 'useref', 'images', 'fonts'])
+});
+
+// build project
+gulp.task('prod', () => {
+  runSequence('clean:dist', ['css', 'js', 'useref', 'images', 'fonts'])
 });
 
 // default task for easy start
