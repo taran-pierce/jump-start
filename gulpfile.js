@@ -62,7 +62,7 @@ gulp.task('browserSync', () => {
 
 // concat files and ugilfy them
 gulp.task('useref', () => {
-  return gulp.src('app/**/*.html')
+  return gulp.src('app/**/*.php')
     .pipe(pl.useref())
     .pipe(pl.if('*.js', pl.uglify()))
     .pipe(pl.if('*.css', pl.cssnano()))
@@ -100,7 +100,7 @@ gulp.task('prod-images', function() {
 
 // copy files 
 gulp.task('copy', function() {
-  return gulp.src('app/*.+(png|xml|gif|ico)')
+  return gulp.src('app/**/*.+(png|xml|gif|ico|htaccess)')
     .pipe(gulp.dest('dist/'))
 })
 
