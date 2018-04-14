@@ -3,7 +3,21 @@ const pl          = require('gulp-load-plugins')();
 const browserSync = require('browser-sync').create();
 const runSequence = require('run-sequence');
 const imagemin    = require('gulp-imagemin');
+const connect     = require('gulp-connect-php');
 const del         = require('del');
+
+let server = new connect();
+
+// start local php server
+gulp.task('connect', () => {
+  server.server({
+    port: 9100,
+    base: 'app'
+  });
+});
+gulp.task('disconnect', () => {
+  server.closeServer();
+});
 
 // compile sass to css
 gulp.task('sass', () => {
@@ -33,14 +47,16 @@ gulp.task('watch', ['browserSync', 'sass'], () => {
   gulp.watch('app/scss/**/*.scss', ['sass']);
   gulp.watch('app/**/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
+  gulp.watch('app/**/*.php', browserSync.reload);
 });
 
 // live reload
 gulp.task('browserSync', () => {
   browserSync.init({
-    server: {
-      baseDir: 'app'
-    }
+    //server: {
+    //  baseDir: 'app'
+    //},
+    proxy: 'http://127.0.0.1:9100/'
   })
 });
 
@@ -118,5 +134,5 @@ gulp.task('prod', () => {
 
 // default task for easy start
 gulp.task('default', () => {
-  runSequence(['build', 'browserSync', 'watch'])
+  runSequence('build', ['connect', 'browserSync', 'watch'])
 });

@@ -1,0 +1,15 @@
+# uncomment on production to PW the directory
+#AuthType Basic
+#AuthName "dev"
+#AuthUserFile "/home2/tpierce/.htpasswds/dev.caddolakebayoutours.com/passwd"
+#require valid-user
+
+Options +MultiViews
+
+Options Indexes
+ErrorDocument 404 error-pages/404.php
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(caddolakebayoutours\.com)(:80)? [NC]
+RewriteRule ^(.*) http://www.caddolakebayoutours.com/$1 [R=301,L,QSA]
+DirectoryIndex index.php
+#order deny,allow
