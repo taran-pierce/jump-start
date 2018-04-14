@@ -2,14 +2,8 @@ const gulp        = require('gulp');
 const pl          = require('gulp-load-plugins')();
 const browserSync = require('browser-sync').create();
 const runSequence = require('run-sequence');
-const del          = require('del');
-
-// generic example
-//gulp.task('task-name', () => {
-//  return gulp.src('source-files') // Get source files with gulp.src
-//    .pipe(pl.aGulpPlugin()) // Sends it through a gulp plugin which is loaded dynamically by 'pl.'
-//    .pipe(gulp.dest('destination')) // Outputs the file in the destination folder
-//})
+const imagemin    = require('gulp-imagemin');
+const del         = require('del');
 
 // compile sass to css
 gulp.task('sass', () => {
@@ -71,6 +65,29 @@ gulp.task('images', function() {
     .pipe(gulp.dest('dist/images'))
 });
 
+// optimze images
+gulp.task('prod-images', function() {
+  return gulp.src('app/images/**/*.+(png|jpg|jpg|gif|svg)')
+    .pipe( pl.cache( pl.imagemin([
+	  imagemin.gifsicle({ interlaced: true }),
+	  imagemin.jpegtran({ progressive: true }),
+	  imagemin.optipng({ optimizationLevel: 8 }),
+	  imagemin.svgo({
+		plugins: [
+		  { removeViewBox: true },
+		  { cleanupIDs: false }
+		]}
+      )
+    ]) ) )
+    .pipe(gulp.dest('dist/images'))
+});
+
+// copy files 
+gulp.task('copy', function() {
+  return gulp.src('app/*.+(png|xml|gif|ico)')
+    .pipe(gulp.dest('dist/'))
+})
+
 // move fonts
 gulp.task('fonts', function() {
   return gulp.src('app/fonts/**/*')
@@ -89,7 +106,14 @@ gulp.task('build', () => {
 
 // build project
 gulp.task('prod', () => {
-  runSequence('clean:dist', ['css', 'js', 'useref', 'images', 'fonts'])
+  runSequence('clean:dist', [
+    'css',
+    'js',
+    'useref',
+    'prod-images',
+    'fonts',
+    'copy'
+  ])
 });
 
 // default task for easy start
