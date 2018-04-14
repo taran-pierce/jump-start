@@ -1,44 +1,61 @@
 <?php
+  #print_r( "Testing!" );
 
-  # send email
-  $errors = '';
-
-  $myemail = 'taran.tpdesign@gmail.com';//<-----Put Your email address here.
-
-  if ( empty($_POST['first_name'])  ||
-       empty($_POST['email']) ||
-       empty($_POST['message']) ) {
-         $errors .= "\n Error: We need more information.";
-  }
-
+  # form data
   $first_name = $_POST['first_name'];
   $last_name = $_POST['last_name'];
-  $whole_name = $first_name . $last_name;
-  $email_address = $_POST['email'];
-  $subject_line = $_POST['subject'];
+  $email = $_POST['email'];
+  $subject = $_POST['subject'];
   $message = $_POST['message'];
 
-  if ( !preg_match(
-    "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
-    $email_address) ) {
-      $errors .= "\n Error: Invalid email address";
+  $full_name = $first_name . ' ' . $last_name;
+
+  #print_r( 'Name: ' . $full_name );
+  #print_r( 'Email: ' . $email );
+  #print_r( 'Subject: ' . $subject );
+  #print_r( 'Message: ' . $message );
+
+  $email_from = $email;
+
+  $email_body = "You have received a new message from the user $full_name.\n\n" .
+    "Here is the message:\n $message";
+
+  $to = "rich@caddolakebayoutours.com";
+  $headers = "From: $email_from \r\n";
+  $headers .= "Reply-To: $email_from \r\n";
+
+  function IsInjected( $str ) {
+    $injections = array('(\n+)',
+           '(\r+)',
+           '(\t+)',
+           '(%0A+)',
+           '(%0D+)',
+           '(%08+)',
+           '(%09+)'
+           );
+
+    $inject = join('|', $injections);
+    $inject = "/$inject/i";
+
+    if(preg_match($inject,$str))
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
   }
 
-  if ( empty( $errors ) ) {
-    $to = $myemail;
-    $email_subject = "Contact form submission: $whole_name, $subject_line";
-    $email_body = "You have received a new message. ".
-      "Here are the details:\n".
-      "Name: $whole_name \n ".
-      "Email: $email_address\n".
-      "Message: \n $message";
-
-    $headers = "From: $myemail\n";
-    $headers .= "Reply-To: $email_address";
-
-    mail( $to, $email_subject, $email_body, $headers);
-
-    //redirect to the 'thank you' page
-    header('Location: contact.html');
+  if ( IsInjected( $email_from ) ) {
+    echo "Bad email value!";
+    exit;
   }
+
+
+
+  mail( $to, $subject, $email_body, $headers);
+
+  header("Location: /thank-you");
+  die();
 ?>

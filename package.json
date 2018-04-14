@@ -4,7 +4,7 @@
   "description": "",
   "main": "app/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tar": "echo \"Make tar\" && tar -cvzf website.tar.gz dist && exit"
   },
   "repository": {
     "type": "git",
