@@ -15,94 +15,28 @@
         <p>Of course, like most things, it's even more beautiful in person. You don't have to take our word for it though, you can come and see for yourself. Call us today!</p>
         <div class="image-gallery-container">
           <div class="image-gallery">
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-3.jpg" alt="Lake Thumbnail 3" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-2.jpg" alt="Lake Thumbnail 3" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-4.jpg" alt="Lake Thumbnail 4" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-5.jpg" alt="Lake Thumbnail 5" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-6.jpg" alt="Lake Thumbnail 6" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-7.jpg" alt="Lake Thumbnail 7" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-8.jpg" alt="Lake Thumbnail 8" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-9.jpg" alt="Lake Thumbnail 9" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-10.jpg" alt="Lake Thumbnail 10" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-11.jpg" alt="Lake Thumbnail 11" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-12.jpg" alt="Lake Thumbnail 12" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-13.jpg" alt="Lake Thumbnail 13" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-14.jpg" alt="Lake Thumbnail 14" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-15.jpg" alt="Lake Thumbnail 15" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-16.jpg" alt="Lake Thumbnail 16" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-17.jpg" alt="Lake Thumbnail 17" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-18.jpg" alt="Lake Thumbnail 18" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-19.jpg" alt="Lake Thumbnail 19" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-20.jpg" alt="Lake Thumbnail 20" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-21.jpg" alt="Lake Thumbnail 21" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-22.jpg" alt="Lake Thumbnail 22" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-23.jpg" alt="Lake Thumbnail 23" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-24.jpg" alt="Lake Thumbnail 24" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-25.jpg" alt="Lake Thumbnail 25" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-26.jpg" alt="Lake Thumbnail 26" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-27.jpg" alt="Lake Thumbnail 27" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-28.jpg" alt="Lake Thumbnail 28" />
-            </div>
-            <div class="slide">
-              <img src="images/thumbs/thumb-lake-30.jpg" alt="Lake Thumbnail 30" />
-            </div>
+            <?php
+              $count = 30;
+
+              include("templates/gallery/_slide.php");
+            ?>
           </div>
           <div class="gallery-navigation clearfix">
             <button class="btn btn-default prev pull-left">Previous</button>
             <button class="btn btn-default next pull-right">Next</button>
+          </div>
+          <div class="modal fade" id="gallery-lightbox" tabindex="-1" role="dialog" aria-labelledby="gallery-lightbox">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">Lightbox</h4>
+                </div>
+                <div class="modal-body"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
