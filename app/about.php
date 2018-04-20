@@ -21,7 +21,7 @@
               <a class="btn btn-info" href="photo-gallery.html">View Photos</a>
             </p>
             <h3>Wildlife in the area</h3>
-            <p>Here are just a few examples of the wildlife you can expect to see:</p>
+            <p>A recent study shows 216 types of birds, 90 different species of fish and reptiles and 47 different types of mammals.</p>
             <ul class="list-unstyled">
               <li>
                 <h5><strong>Alligators</strong></h5>
