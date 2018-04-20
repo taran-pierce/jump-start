@@ -4,7 +4,6 @@
   <title>Caddo Lake Bayou Tours</title>
   <meta name="description" content="Caddo Lake Bayou Tours">
   <link rel="canonical" href="http://www.caddolakebayoutours.com/" />
-
   <meta name="author" content="Taran Pierce">
   <meta name="description" content="Caddo Lake Bayou Tours, Caddo Lake, Bayou Tours, tour guide, fishing guide, photography and many more">
   <meta name="keywords" content="Caddo Lake, caddo lake bayou tours, caddo lake tour guide, fishing guide, swamp tours, caddo lake swamp, boat tours, personal tours, backwater, wildlife,
@@ -33,7 +32,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="css/base.css">
+  <link rel="preload stylesheet" href="css/base.css">
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
