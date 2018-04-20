@@ -100,7 +100,7 @@ gulp.task('prod-images', function() {
 
 // copy files 
 gulp.task('copy', function() {
-  return gulp.src('app/**/*.+(png|xml|gif|ico|htaccess)')
+  return gulp.src('app/**/*.+(png|xml|gif|ico|json|.htaccess)')
     .pipe(gulp.dest('dist/'))
 })
 
