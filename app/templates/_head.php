@@ -3,7 +3,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Caddo Lake Bayou Tours</title>
   <meta name="description" content="Caddo Lake Bayou Tours">
+  <link rel="canonical" href="http://www.caddolakebayoutours.com/" />
+
   <meta name="author" content="Taran Pierce">
+  <meta name="description" content="Caddo Lake Bayou Tours, Caddo Lake, Bayou Tours, tour guide, fishing guide, photography and many more">
+  <meta name="keywords" content="Caddo Lake, caddo lake bayou tours, caddo lake tour guide, fishing guide, swamp tours, caddo lake swamp, boat tours, personal tours, backwater, wildlife,
+  gator, alligator, lake guide, caddo, lake, texas lake, natural lake, Louisiana lake, boats, bird watching, sightseeing, Caddo businesses, Texas, caddo lake information, uncertain texas, swamp tour, swamp adventure, caddo indians, spanish moss, fishing, caddo lake history, ">
   <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
