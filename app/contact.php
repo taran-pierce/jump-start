@@ -44,6 +44,7 @@
             </div>
             <div class="col-xs-12 col-sm-6">
               <img class="img-responsive" src="images/aerial-1.jpg" alt="Another park" />
+              <h3>Rich McFarland <small>Tour Guide</small></h3>
               <h3>Address</h3>
               <ul class="list-unstyled">
                 <li><strong>449 Cypress Drive</strong></li>

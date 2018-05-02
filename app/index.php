@@ -23,8 +23,8 @@
               </p>
             </div>
             <div class="col-xs-12 col-md-6">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" width="560" height="315" src="//www.youtube.com/embed/UHW2DYEtvi4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <div class="img-container">
+                <img class="img-responsive" alt="Aerial view" src="images/aerial-1.jpg" />
               </div>
             </div>
           </div>
