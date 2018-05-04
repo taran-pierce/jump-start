@@ -8,8 +8,28 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="container body-content">
       <?php include("templates/_navigation.php"); ?>
+      <style>
+        .hero {
+          background-image: url('images/sunset/lake-sunset-xl.jpg');
+          background-repeat: no-repeat;
+          background-position: -590px -350px;
+          height: 300px;
+        }
+
+        @media( min-width: 768px) {
+          .hero {
+            background-position: -182px -368px;
+          }
+        }
+
+        @media( min-width: 992px) {
+          .hero {
+            background-position: 0 -368px;
+          }
+        }
+      </style>
       <section class="hero">
-        <img class="img-responsive" src="images/lake-banner-4.jpg" alt="Cypress trees at Caddo Lake" />
+        <!--<img class="img-responsive" src="images/sunset/lake-sunset-xl.jpg" alt="Cypress trees at Caddo Lake" />-->
       </section>
       <section>
         <div class="container">
