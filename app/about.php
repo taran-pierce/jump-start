@@ -16,9 +16,9 @@
           <div class="row">
           <div class="col-xs-12 col-md-6">
             <h1>About Caddo Lake</h1>
-            <p>Caddo Lake is steeped in history dating back to the early 1800's. The history which includes the Caddo Indian tribes that inhabited the area and the steamboat navigational trade from New Orleans to Jefferson, Texas are just some of the lakes rich history.</p>
+            <p>Caddo Lake is steeped in history dating back to the early 1800's. The history which includes the Caddo Indian tribes that inhabited the area and the steamboat navigational trade from New Orleans, Louisiana to Jefferson, Texas are just some of the lake's rich history.</p>
             <p>
-              <a class="btn btn-info" href="photo-gallery.html">View Photos</a>
+              <a class="btn btn-info" href="photo-gallery">View Photos</a>
             </p>
             <h3>Wildlife in the area</h3>
             <p>A recent study shows 216 types of birds, 90 different species of fish and reptiles and 47 different types of mammals.</p>
@@ -68,6 +68,7 @@
                 <li>
                   <h4><strong>Sightseeing</strong></h4>
                   <p>Enjoy the beautiful lake, lots of wildlife and the overall mystique of Caddo Lake.</p>
+                  <p>Visit historic Jefferson, Texas and enjoy all that it has to offer.</p>
                   <p><a href="https://www.fws.gov/refuge/caddo_lake/wildlife/paddlefish.html" target="_blank" rel="noopener">More info here.</a></p>
                 </li>
                 <li>

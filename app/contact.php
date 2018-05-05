@@ -49,7 +49,7 @@
               <h3>Address</h3>
               <ul class="list-unstyled">
                 <li><strong>449 Cypress Drive</strong></li>
-                <li>Karnack TX 75661</li>
+                <li>Uncertain TX 75661</li>
                 <li><strong>Phone: </strong>903-570-2169</li>
               </ul>
             </div>
