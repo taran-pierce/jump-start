@@ -3,3 +3,5 @@ dist/*
 *.orig
 **/node_modules/*
 app/css/*
+.env.local
+.next/
