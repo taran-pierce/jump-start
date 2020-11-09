@@ -14,6 +14,17 @@ async function getEntry(id) {
   return pageContent;
 }
 
+async function getAsset(id) {
+  const url = `${baseUrl}/assets/${id}?access_token=${accessToken}`;
+  const res = await fetch(url).catch((error) => {
+    console.error('There was an error: ', error);
+  });
+  const content = await res.json();
+  const pageContent = content.fields;
+
+  return pageContent;
+}
+
 async function getPageContent(id) {
   // get page content
   let content = await getEntry(id);
@@ -51,12 +62,20 @@ const getChildEntryContent = content => {
 // async function to get child entry data
 const getChildEntryData = async id => {
   const content = await getEntry(id);
+  const imageId = content.image?.sys?.id;
+  const image = imageId && await getAsset(imageId);
+
+  // replace image data if found
+  if (image) {
+    content.image = image;
+  }
 
   return getChildEntryContent(content)
 }
 
 module.exports = {
   getEntry,
+  getAsset,
   getPageContent,
   getChildEntryData,
 };
