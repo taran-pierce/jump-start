@@ -1,9 +1,10 @@
 # jump-start `2.0.0`
-Get started quick with Next.js, Cloudinary and Contentful.
+Get started quick with Next.js and Contentful.
 
 ## Setup
 * Clone project
 * `npm install`
+* Create `.env.local` file with config options from your Contentful space: SPACE_ID, ENV_ID, ACCESS_TOKEN
 * Dev Mode: `npm run dev`
 * Build for production: `npm run build`
 
