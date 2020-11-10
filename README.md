@@ -1,4 +1,4 @@
-# jump-start `2.1.0`
+# jump-start `2.2.0`
 Get started quick with Next.js and Contentful.
 
 ## Setup

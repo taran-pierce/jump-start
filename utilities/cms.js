@@ -11,6 +11,14 @@ async function getEntry(id) {
   const content = await res.json();
   const pageContent = content.fields;
 
+  const imageId = pageContent.image?.sys?.id;
+  const image = imageId && await getAsset(imageId);
+
+  // replace image data if found
+  if (image) {
+    pageContent.image = image;
+  }
+
   return pageContent;
 }
 
@@ -25,30 +33,43 @@ async function getAsset(id) {
   return pageContent;
 }
 
+const childIds = [];
+
 async function getPageContent(id) {
   // get page content
   let content = await getEntry(id);
 
   // look to see if there are children
   const hasChildren = (content.components).length > 0;
-  const childIds = [];
 
-  // grab the ids of the child entries
+  // if there are children get data for them
   if (hasChildren) {
     (content.components).map((component) => {
+      // get the component id
       const childId = component.sys?.id;
 
+      // store the ids
       childIds.push(childId);
     });
-  }
 
-  // remove component references from content object
-  delete content.components;
+    // get component data
+    const components = await getComponentData();
+
+    // remove component object with only IDs
+    delete content.components;
+
+    // replace components data
+    content.components = components;
+  }
 
   return {
     content,
-    childIds,
   };
+}
+
+// async function to get data for children
+const getComponentData = async (content) => {
+  return Promise.all(childIds.map(item => getChildEntryData(item)))
 }
 
 // get the content out of the data
@@ -62,13 +83,6 @@ const getChildEntryContent = content => {
 // async function to get child entry data
 const getChildEntryData = async id => {
   const content = await getEntry(id);
-  const imageId = content.image?.sys?.id;
-  const image = imageId && await getAsset(imageId);
-
-  // replace image data if found
-  if (image) {
-    content.image = image;
-  }
 
   return getChildEntryContent(content)
 }
@@ -77,5 +91,4 @@ module.exports = {
   getEntry,
   getAsset,
   getPageContent,
-  getChildEntryData,
 };
