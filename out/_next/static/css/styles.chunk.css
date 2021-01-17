@@ -1,0 +1,16 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0; }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media (min-width: 768px) {
+  section.split-content .container {
+    display: flex;
+    align-items: center; }
+  section.split-content .text-content,
+  section.split-content .image-content {
+    width: 50%; } }
+

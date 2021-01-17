@@ -1,9 +1,13 @@
 import React from 'react';
 
-import SplitContent from '../components/splitContent/index';
+import {
+  getPageContent,
+  getPageId,
+  testFetch,
+  getContentfulEntry,
+} from '../utilities/index';
 
-import {getPageContent} from '../utilities/cms';
-import { getPageId } from '../utilities/getPageId';
+import SplitContent from '../components/splitContent/index';
 
 function HomePage(props) {
   const {
@@ -33,6 +37,10 @@ export async function getStaticProps(ctx) {
   const {
     content,
   } = await getPageContent(entryId);
+
+  const test = await getContentfulEntry(entryId);
+
+  // console.log('test: ', test);
 
   return {
     props: {
