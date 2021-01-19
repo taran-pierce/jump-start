@@ -71,7 +71,7 @@ async function getEntry(id) {
   const content = await res.json();
   const pageContent = content.fields;
 
-  const imageId = pageContent.image?.sys?.id;
+  const imageId = pageContent?.image?.sys?.id;
   const image = imageId && await getAsset(imageId);
 
   // replace image data if found

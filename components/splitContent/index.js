@@ -6,7 +6,7 @@ function SplitContent(props) {
     bodyCopy,
     imageOnLeft,
     image,
-  } = props.content?.data;
+  } = props?.content;
 
   return (
     <section className={`split-content`}>
@@ -16,14 +16,14 @@ function SplitContent(props) {
           {headline && (
             <h2>{headline}</h2>
           )}
-          {bodyCopy && bodyCopy.content.map((paragraph, index) => (
-            <p key={index}>{paragraph.content[0].value}</p>
+          {bodyCopy && bodyCopy?.content?.map((paragraph, index) => (
+            <p key={index}>{paragraph?.content[0]?.value}</p>
           ))}
         </div>
         )}
         {image && (
         <div className={`image-content`}>
-          <img src={image.file.url} alt={image.title} />
+          <img src={image?.file?.url} alt={image?.title} />
         </div>
         )}
       </div>

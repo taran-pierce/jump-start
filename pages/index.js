@@ -33,7 +33,8 @@ function HomePage(props) {
 export default HomePage;
 
 export async function getStaticProps(ctx) {
-  const entryId = getPageId('/')
+  const entryId = getPageId('/');
+
   const {
     content,
   } = await getPageContent(entryId);
@@ -45,6 +46,7 @@ export async function getStaticProps(ctx) {
   return {
     props: {
       content,
+      test,
     },
   }
 }
